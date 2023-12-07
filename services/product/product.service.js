@@ -23,7 +23,7 @@ function main(){
     })
 
     server.bindAsync(productServiceURL,grpc.ServerCredentials.createInsecure(),(err,port)=>{
-        if(err) return console.log(err.message);
+        if(err) return console.log(err);
         console.log('gRPC product service is running on port ', port);
         server.start();
     })
